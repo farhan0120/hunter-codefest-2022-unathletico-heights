@@ -19,10 +19,14 @@ def index():
 # The API route is what the client will contact to get its matches
 @app.route('/api')
 def api():
-	# Request arguments, like id, are used by accessing:
-	# www.example.com/api?id=X&num=Y
-	# There is currently no handling for URLs which do not
+	# Request arguments, like players, are used by accessing:
+	# www.example.com/api?players=X&time=X&age=X&difficulty=X&popularity=X
+	# Note: there is currently no handling for URLs which do not
 	# provide all of the arguments we are using
-	id = request.args['id']
-	num = request.args['num']
-	return "API Ok for id " + id + " and num " + num
+	players = request.args['players']
+	time = request.args['time'] # in minutes
+	age = request.args['age'] # player age in years
+	difficulty = request.args['difficulty'] # from 1-5
+	popularity = request.args['popularity'] # from 1-100,
+			# 1 being most; corresponds to rank
+	return "API OK for [players, time, age, difficulty, popularity] as [" + players + ", " + time + ", " + age + ", " + difficulty + ", " + popularity + "]"
