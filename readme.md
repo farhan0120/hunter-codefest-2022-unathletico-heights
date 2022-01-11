@@ -1,4 +1,4 @@
-![alt text]https://github.com/huntercodefest/hunter-codefest-2022-unathletico-heights/blob/master/Codefest%20Sequence%20Diagram.png
+![alt text](https://github.com/huntercodefest/hunter-codefest-2022-unathletico-heights/blob/master/Codefest%20Sequence%20Diagram.png)
 
 
 # Flask App Template
