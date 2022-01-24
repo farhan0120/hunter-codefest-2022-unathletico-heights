@@ -1,89 +1,101 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+]{% extends 'base.html'%}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css?q={{time}}" />
-    <title>{% block title%}{% endblock %}</title>
-  </head>
-  <body>    
-        <nav id="navigate" class="navbar navbar-dark bg-dark navbar-expand-lg">
-            <button style="color:#ffffff;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span style="color:#ffffff;" class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                <a style="color:#fafafa;" class="nav-item nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
-                <a style="color:#ffffff;" class="nav-item nav-link" href="#">Page 1</a>
-                </div>
-            </div>
-        </nav>
+{% block title%}Homepage{% endblock %}
 
-        <div id="index_body">
-            <br>
-            <br>
-            <br>
-            <div class="jumbotron container">
-                <h1 class="display-4">Let's recommend you a game!</h1>
-                <p class="lead">Welcome to this page. Lets find your board game. Enter a genre then press submit.</p>
-                <hr class="my-4">
-                <br>
+{% block content%}
+<div id="index_body">
+    <br>
+    <br>
+    <br>
+    <div class="jumbotron container">
+        <h1 class="display-4">Let's recommend you a game!</h1>
+        <p class="lead">Welcome to this page. We know that you're stuck home in quarantine so why not try a board game. 
+        To get started enter your genre, minimum and maximum number of players then press submit.</p>
         
-                <div class="form">
-                    <form class= "form-inline" action="game_recs" method="POST">
-                        <div class="container col col-lg-1"></div>
-                        <div class="container col col-lg-4">
-                            <select name="genre" class="form-control  mb-2 mr-sm-2 form-control-lg col col-lg-12" placeholder="Select Your Genre">
-                                <option>Fighting</option>
-                                <option>Shooter</option>
-                                <option>Music</option>
-                                <option>Platform</option>
-                                <option>Puzzle</option>
-                                <option>Racing</option>
-                                <option>Real Time Strategy (RTS)</option>
-                                <option>Role-playing (RPG)</option>
-                                <option>Simulator</option>
-                                <option>Sport</option>
-                                <option>Strategy</option>
-                                <option>Turn-based strategy (TBS)</option>
-                                <option>Tactical</option>
-                                <option>Hack and slash/Beat 'em up</option>
-                                <option>Quiz/Trivia</option>
-                                <option>Pinball</option>
-                                <option>Adventure</option>
-                                <option>Indie</option>
-                                <option>Arcade</option>
-                                <option>Visual Novel</option>
-                                <option>Card & Board Game</option>
-                                <option>MOBA</option>
-                            </select>
-                        </div>
-                        
-                        <div class="container col col-lg-1"> 
-                            <button style="background-color: #389CFA" type="submit" class="btn btn-info btn-lg ">Submit</button>
-                        </div>
-                    
-                        <div class="container col col-lg-1"></div>
-                    
-                    </form>
-                </div>
-            </div>
-        </div>
-        {% block content%}{% endblock %}
+        <hr class="my-4">
+        <br>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <!-- Visit https://feathericons.com/ to see icons you can use -->
-    <script>
-      feather.replace()
-    </script>
-  </body>
-</html>
+        <div class="form">
+            <form class= "form-inline" action="game_recs" method="POST">
+                <div class="container col col-lg-1"></div>
+                <div class="container col col-sm-4 row">
+                    <select name="genre" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-8" placeholder="Select Your Genre">
+                        <option>Genre</option>
+                        <option>Fighting</option>
+                        <option>Shooter</option>
+                        <option>Music</option>
+                        <option>Platform</option>
+                        <option>Puzzle</option>
+                        <option>Racing</option>
+                        <option>Real Time Strategy (RTS)</option>
+                        <option>Role-playing (RPG)</option>
+                        <option>Simulator</option>
+                        <option>Sport</option>
+                        <option>Strategy</option>
+                        <option>Turn-based strategy (TBS)</option>
+                        <option>Tactical</option>
+                        <option>Hack and slash/Beat 'em up</option>
+                        <option>Quiz/Trivia</option>
+                        <option>Pinball</option>
+                        <option>Adventure</option>
+                        <option>Indie</option>
+                        <option>Arcade</option>
+                        <option>Visual Novel</option>
+                        <option>Card & Board Game</option>
+                        <option>MOBA</option>
+                    </select>
+                </div>
+                <div class="container col col-sm-4 row">
+                    <select name= "min_players" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-8" placeholder="Select min number of players" >
+                        <option>Min Players</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                    </select>
+                </div>
+
+                <div class="container col col-sm-4 row">
+                    <select name="max_player" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-8" placeholder="Select max number of players">
+                        <option>Max Players</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                    </select>
+                </div>
+                
+                
+                <div class="container col col-lg-24"> 
+                    <button style="background-color: #389CFA" type="submit" class="btn btn-info btn-lg ">Submit</button>
+                </div>
+            
+                <div class="container col col-lg-1"></div>
+            
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

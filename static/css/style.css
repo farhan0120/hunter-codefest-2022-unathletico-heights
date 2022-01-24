@@ -1,0 +1,42 @@
+#navigate {
+    background-color: var(--oxford-blue-3);
+}
+
+form {
+    text-align: center;
+}
+
+form div.container select {
+    display: inline-block;
+}
+
+#index_body {
+    background-image: url("/static/images/background_image.jpeg");
+    
+    background-position: cover;
+    background-size: cover; 
+    height: 100%;
+    min-height: 100%;
+    min-width: 1024px;
+	
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+	
+     /* Set up positioning */
+    position: fixed;
+    left: 0;
+    /* background-repeat: no-repeat; */
+    
+    
+}
+
+.jumbotron {
+    color:black;
+    background-color:#FFD580;
+    background-size: cover;
+}
+
+html, body {
+    height: 100%;
+}
