@@ -19,30 +19,18 @@
             <form class= "form-inline" action="game_recs" method="POST">
                 <div class="container col col-lg-1"></div>
                 <div class="container col col-sm-4 row">
-                    <select name="genre" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-8" placeholder="Select Your Genre">
-                        <option>Genre</option>
-                        <option>Fighting</option>
-                        <option>Shooter</option>
-                        <option>Music</option>
-                        <option>Platform</option>
-                        <option>Puzzle</option>
-                        <option>Racing</option>
-                        <option>Real Time Strategy (RTS)</option>
-                        <option>Role-playing (RPG)</option>
-                        <option>Simulator</option>
-                        <option>Sport</option>
-                        <option>Strategy</option>
-                        <option>Turn-based strategy (TBS)</option>
-                        <option>Tactical</option>
-                        <option>Hack and slash/Beat 'em up</option>
-                        <option>Quiz/Trivia</option>
-                        <option>Pinball</option>
-                        <option>Adventure</option>
-                        <option>Indie</option>
-                        <option>Arcade</option>
-                        <option>Visual Novel</option>
-                        <option>Card & Board Game</option>
-                        <option>MOBA</option>
+                    <select name="time" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-8" placeholder="Select time">
+                        <option>Select time in minutes</option>
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                        <option>60</option>
+                        <option>75</option>
+                        <option>90</option>
+                        <option>120</option>
+                        <option>180</option>
+                        <option>240</option>
+                        <option>360</option>
                     </select>
                 </div>
                 <div class="container col col-sm-4 row">
@@ -87,6 +75,31 @@
                     </select>
                 </div>
                 
+                <select name="age" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-4" placeholder="Select age">
+                    <option>Select minimum age if desired</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                </select>
+
+                <label name="difficulty" for="difficulty" class="form-label px-2">Difficulty</label>
+                    <input type="range" class="form-range" min="1" max="5" id="difficulty">
+
+                <label name="popularity" for="popularity" class="form-label px-2">Popularity</label>
+                    <input type="range" class="form-range" min="1" max="5" id="popularity">
+
                 
                 <div class="container col col-lg-24"> 
                     <button style="background-color: #389CFA" type="submit" class="btn btn-info btn-lg ">Submit</button>

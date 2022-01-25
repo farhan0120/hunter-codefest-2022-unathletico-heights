@@ -1,0 +1,21 @@
+]{% extends 'base.html'%}
+
+{% block title%}Result{% endblock %}
+
+{% block content%}
+
+<div class="card" style="width: 18rem;">
+    <img src="{{image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">{{description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{players}}</li>
+      <li class="list-group-item">{{time}}</li>
+      <li class="list-group-item">{{age}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="btn btn-primary">Next Game</a>
+    </div>
+  </div>
