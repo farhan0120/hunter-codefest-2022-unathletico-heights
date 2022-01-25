@@ -40,3 +40,9 @@ form div.container select {
 html, body {
     height: 100%;
 }
+
+img{
+    width:100%;
+    max-width:600px;
+    height: 100%;
+}
