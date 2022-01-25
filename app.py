@@ -60,6 +60,7 @@ def api():
 		for row in csvreader:
 			rows.append(row)
 
+
 	## Start eliminating
 	# By minutes (strong)
 	toRemove = []
@@ -75,10 +76,11 @@ def api():
 			toRemove.append(game) # remove even if no time given, as we can't know if it matches user's request	
 	for game in toRemove:
 		rows.remove(game)
-
+		
 	# By players (strong)
 	toRemove = []
 	for game in rows:
+		print(game[1])
 		playersarray = game[1].split() # split "2 4 Players"
 		playersarray.remove("Players")
 		if len(playersarray) == 1 and (playersmin != int(playersarray[0]) or playersmax != int(playersarray[0])):
@@ -105,7 +107,7 @@ def api():
 		popularityarray = game[5].split('/')
 		gamepop = float(popularityarray[0].replace(',', '')) / float(popularityarray[1].replace(',', ''))
 		distancearray.append(pow((difficulty - gamediff) + (popularity - gamepop), 2))
-
+	
 	# Sort weak results
 	resultarray = [x for y, x in sorted(zip(distancearray, rows))]
 		# zips together the two arrays (combines them)
@@ -113,7 +115,6 @@ def api():
 		# and removes the distance values after sorting
 	# Return result
 	if len(resultarray) > result: # if result exists
-		print(resultarray[result])
 		name = resultarray[result][0]
 		players = resultarray[result][1]
 		time = resultarray[result][2]
