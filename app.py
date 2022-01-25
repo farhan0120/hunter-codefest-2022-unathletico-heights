@@ -111,18 +111,18 @@ def api():
 		# zips together the two arrays (combines them)
 		# sorts them (by the combined distance array)
 		# and removes the distance values after sorting
-
-	name = resultarray[result][0]
-	players = resultarray[result][1]
-	time = resultarray[result][2]
-	age = resultarray[result][3]
-	difficulty = resultarray[result][4]
-	rank = resultarray[result][5]
-	description = resultarray[result][6]
-	image = getImageLink(name + " board game")
 	# Return result
 	if len(resultarray) > result: # if result exists
+		print(resultarray[result])
+		name = resultarray[result][0]
+		players = resultarray[result][1]
+		time = resultarray[result][2]
+		age = resultarray[result][3]
+		difficulty = resultarray[result][4]
+		rank = resultarray[result][5]
+		description = resultarray[result][6]
+		image = getImageLink(name + " board game")
+	
 		return render_template("api.html", status="OK", name=name, players=players, time=time, age=age, difficulty=difficulty, rank=rank, description=description, image=image)
-		output = ">>>>>".join(resultarray[result])
 	else:
 		return render_template("api.html", status="ERROR")
