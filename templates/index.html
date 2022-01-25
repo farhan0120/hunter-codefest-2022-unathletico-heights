@@ -95,12 +95,13 @@
                 </select>
 
                 <label name="difficulty" for="difficulty" class="form-label px-2">Difficulty</label>
-                    <input type="range" class="form-range" min="0" max="1" step="0.2" id="difficulty">
+                    <input name="difficulty" type="range" class="form-range" min="0" max="1" step="0.2" id="difficulty">
 
                 <label name="popularity" for="popularity" class="form-label px-2">Popularity</label>
-                    <input type="range" class="form-range" min="0" max="1" step="0.2" id="popularity">
+                    <input name="popularity" type="range" class="form-range" min="0" max="1" step="0.2" id="popularity">
 
-                
+		<input type="hidden" name="result" value="1">                
+
                 <div class="container col col-lg-24"> 
                     <button style="background-color: #389CFA" type="submit" class="btn btn-info btn-lg ">Submit</button>
                 </div>

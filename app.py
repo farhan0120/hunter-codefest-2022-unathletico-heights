@@ -38,6 +38,7 @@ def api():
 	age = int(form["age"])
 	difficulty = float(form["difficulty"])
 	popularity = float(form["popularity"])
+	result = int(form["result"]) - 1
 
 	#playersmin = int(request.args['playersmin'])
 	#playersmax = int(request.args['playersmax'])
@@ -46,7 +47,7 @@ def api():
 	#difficulty = float(request.args['difficulty']) # from 0-1
 	#popularity = float(request.args['popularity']) # from 0-1,
 			# 0 being most; corresponds to rank
-	result = int(request.args['result']) - 1 # which result, starts at 1;
+	#result = int(request.args['result']) - 1 # which result, starts at 1;
 			# present user with result=1, then if they decline, result=2, etc;
 			# we subtract it from 1 here to compensate for 0-indexing
 
