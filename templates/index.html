@@ -16,7 +16,7 @@
         <br>
 
         <div class="form">
-            <form class= "form-inline" action="game_recs" method="POST">
+            <form class= "form-inline" action="api" method="POST">
                 <div class="container col col-lg-1"></div>
                 <div class="container col col-sm-4 row">
                     <select name="time" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-8" placeholder="Select time">
@@ -95,10 +95,10 @@
                 </select>
 
                 <label name="difficulty" for="difficulty" class="form-label px-2">Difficulty</label>
-                    <input type="range" class="form-range" min="1" max="5" id="difficulty">
+                    <input type="range" class="form-range" min="0" max="1" step="0.2" id="difficulty">
 
                 <label name="popularity" for="popularity" class="form-label px-2">Popularity</label>
-                    <input type="range" class="form-range" min="1" max="5" id="popularity">
+                    <input type="range" class="form-range" min="0" max="1" step="0.2" id="popularity">
 
                 
                 <div class="container col col-lg-24"> 
