@@ -80,7 +80,6 @@ def api():
 	# By players (strong)
 	toRemove = []
 	for game in rows:
-		print(game[1])
 		playersarray = game[1].split() # split "2 4 Players"
 		playersarray.remove("Players")
 		if len(playersarray) == 1 and (playersmin != int(playersarray[0]) or playersmax != int(playersarray[0])):
@@ -123,7 +122,6 @@ def api():
 		rank = resultarray[result][5]
 		description = resultarray[result][6]
 		image = getImageLink(name + " board game")
-	
 		return render_template("api.html", status="OK", name=name, players=players, time=time, age=age, difficulty=difficulty, rank=rank, description=description, image=image)
 	else:
 		return render_template("api.html", status="ERROR")
