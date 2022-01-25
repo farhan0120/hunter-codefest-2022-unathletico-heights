@@ -122,6 +122,7 @@ def api():
 		rank = resultarray[result][5]
 		description = resultarray[result][6]
 		image = getImageLink(name + " board game")
+		print(image)
 		return render_template("api.html", status="OK", name=name, players=players, time=time, age=age, difficulty=difficulty, rank=rank, description=description, image=image)
 	else:
 		return render_template("api.html", status="ERROR")

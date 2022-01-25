@@ -1,11 +1,11 @@
-]{% extends 'base.html'%}
+{% extends 'base.html'%}
 
 {% block title%}Result{% endblock %}
 
 {% block content%}
 
-<div class="card" style="width: 18rem;">
-    <img src="{{image}}" class="card-img-top" alt="...">
+<div class="card text-dark bg-light mb-3 jumbotron container" style="width: 36rem;">
+    <img src={{image[1:-1]}} class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
       <p class="card-text">{{description}}</p>
