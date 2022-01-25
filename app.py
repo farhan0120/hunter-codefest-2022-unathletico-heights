@@ -22,6 +22,7 @@ def index():
 # The API route is what the client will contact to get its matches
 @app.route('/api')
 def api():
+
 	## Set up arguments
 	# Request arguments, like players, are used by accessing:
 	# www.example.com/api?playersmin=X&playersmax=X&time=X&age=X&difficulty=X&popularity=X&result=X
@@ -31,7 +32,6 @@ def api():
 	# 		a weak argument is one that we want to be as close as we can to
 	if request.method == 'GET':
         return redirect(url_for("index"))
-
     else:
 		form = request.form
 		playersmin = int(form["min_players"])
