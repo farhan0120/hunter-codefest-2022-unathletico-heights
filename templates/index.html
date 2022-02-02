@@ -9,8 +9,8 @@
     <br>
     <div class="jumbotron container">
         <h1 class="display-4">Let's recommend you a game!</h1>
-        <p class="lead">Welcome to this page. We know that you're stuck home in quarantine so why not try a board game. 
-        To get started enter your maximum age, available time, and minimum and maximum number of players then press submit.</p>
+        <p class="lead">Welcome to this page. We know that you're stuck home in quarantine, so why not try a board game? 
+        To get started, just enter your youngest player's age, available time, minimum and maximum number of players, and then press submit.</p>
         
         <hr class="my-4">
         <br>
@@ -78,7 +78,7 @@
                 </div>
                 
                 <select name="age" class="form-control  mb-4 mr-sm-2 form-control-lg col col-lg-4" placeholder="Select age">
-                    <option>Maximum Age</option>
+                    <option>Youngest Player's Age</option>
                     <option>4</option>
                     <option>5</option>
                     <option>6</option>
@@ -97,10 +97,10 @@
                 </select>
 
                 <label name="difficulty" for="difficulty" class="form-label px-2">Difficulty</label>
-                    <input name="difficulty" type="range" class="form-range" min="0" max="1" step="0.2" value="0.5" id="difficulty">
+                    <input name="difficulty" type="range" class="form-range" min="0" max="1" step="0.01" value="0.50" id="difficulty">
 
                 <label name="popularity" for="popularity" class="form-label px-2">Popularity</label>
-                    <input name="popularity" type="range" class="form-range" min="0" max="1" step="0.2" value="0.5" id="popularity">
+                    <input name="popularity" type="range" class="form-range" min="0" max="1" step="0.01" value="0.50" id="popularity">
 
 		<input type="hidden" name="result" value="1">                
 
