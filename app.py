@@ -121,8 +121,11 @@ def api():
 		difficulty = resultarray[result][4]
 		rank = resultarray[result][5]
 		description = resultarray[result][6]
-		image = getImageLink(name + " board game")
-		print(image)
+		image = "" 
+		try:
+			image = getImageLink(name + " board game")
+		except:
+			image = "'https://us.123rf.com/450wm/oculo/oculo2004/oculo200400003/143645399-no-image-available-icon.jpg?ver=6'"
 		return render_template("api.html", status="OK", name=name, players=players, time=time, age=age, difficulty=difficulty, rank=rank, description=description, image=image)
 	else:
 		return render_template("api.html", status="ERROR")
