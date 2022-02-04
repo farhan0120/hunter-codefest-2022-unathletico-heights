@@ -10,7 +10,7 @@ import csv # for /api endpoint
 
 
 # -- Initialization section --
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 
 # -- Routes section --
